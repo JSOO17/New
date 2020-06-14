@@ -20,7 +20,7 @@ namespace New.Controllers
             IEnumerable<Models.History> lst = null;
             using (var db = new SqlConnection(connection))
             {
-                var sql = "SELECT * FROM History";
+                var sql = "SELECT * FROM History ORDER BY SearchedAt DESC";
                 lst = db.Query<Models.History>(sql);
             }
             return Ok(lst);

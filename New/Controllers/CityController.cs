@@ -41,7 +41,7 @@ namespace New.Controllers
 
             //query currentWeather
             IEnumerable<Models.CurrentWeather> currentWeather = null;
-            var sqlCurrentWeather = "SELECT TOP 1 * FROM CurrentWeather WHERE CityId = @id ORDER BY ObservationTime DESC";
+            var sqlCurrentWeather = "SELECT TOP 1 ObservationTime, Temperature, WeatherDescription, WindSpeed, WindDegree, windDir, Pressure, Precip, HumidiTy, CloudOver, Feelslike, Visibility FROM CurrentWeather WHERE CityId = @id ORDER BY ObservationTime DESC";
 
             //query news
             IEnumerable<Models.New> news = null;

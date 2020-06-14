@@ -9,9 +9,10 @@ namespace New.Models
     {
         public int Id { get; set; }
         public DateTime ObservationTime { get; set; }
+        public int Temperature { get; set; }
         public string WeatherDescription { get; set; }
         public int WindSpeed { get; set; }
-        public int WinndDegree { get; set; }
+        public int WindDegree { get; set; }
         public string windDir { get; set; }
         public int Pressure { get; set; }
         public int Precip { get; set; }
